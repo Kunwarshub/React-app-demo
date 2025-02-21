@@ -4,6 +4,10 @@ from typing import List
 import uvicorn
 
 app = FastAPI()
+@app.get("/")
+def read_root():
+    return {"message": "Hello, FastAPI is running!"}
+
 
 # User details (Replace with actual details)
 USER_ID = "kunwar_abhey_01012000"  # Format: full_name_ddmmyyyy
