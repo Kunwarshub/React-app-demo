@@ -10,7 +10,7 @@ function App() {
     const dataArray = inputData.split(",").map((item) => item.trim());
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/bfhl", { data: dataArray });
+      const res = await axios.post("https://react-app-demo-backend.onrender.com/bfhl", { data: dataArray });
       setResponse(res.data);
     } catch (error) {
       console.error("Error sending request:", error);
